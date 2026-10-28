@@ -1,0 +1,13 @@
+[package]
+name = "mykernel-arm64"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+uefi = { version = "0.34", features = ["panic_handler", "logger"] }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
